@@ -61,7 +61,7 @@ jobs:
 
       # Packages the root static site (index.html, styles.css, and assets/) as the Pages artifact.
       - name: Upload static site artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: .
 
