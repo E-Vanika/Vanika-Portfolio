@@ -57,7 +57,7 @@ jobs:
 
       # Enables Pages when needed, then prepares deployment metadata and configuration.
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
         with:
           enablement: true
 
