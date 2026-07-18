@@ -11,7 +11,8 @@ A responsive, terminal-inspired portfolio that presents my DevOps and SRE work: 
 - Multi-region resilience patterns with automated RDS snapshot replication and restore testing.
 - Redis-to-Valkey migration that reduced cache infrastructure costs by 33%.
 - EKS upgrades, Grafana and CloudWatch observability, and on-call ownership.
-- AI-assisted SRE enablement through service-flow analysis and a Wiki MCP integration.
+- Reduced MTTR through an AI incident-triage workflow and a cross-IDE skills registry hub.
+- Improved configuration stability by migrating infrastructure workflows from Terraform to Terragrunt.
 
 ## Delivery pipeline
 
