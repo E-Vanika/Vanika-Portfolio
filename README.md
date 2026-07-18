@@ -44,3 +44,7 @@ python scripts/validate_site.py
 4. Watch the deployment in the **Actions** tab; the successful deployment job provides the public URL.
 
 For a project repository, the address is typically `https://E-Vanika.github.io/Vanika-Portfolio/`.
+
+## Reusing this portfolio
+
+Read [AGENTS.md](AGENTS.md) for an LLM-agnostic guide to safely tailor this portfolio for another DevOps professional.
