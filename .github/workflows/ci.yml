@@ -1,0 +1,35 @@
+name: Static site quality checks
+
+# Give contributors fast feedback before changes reach the deployment branch.
+on:
+  pull_request:
+    branches: [main, master]
+
+# Cancel stale checks when a pull request receives a newer commit.
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Validation only needs to read the source files.
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate HTML and local links
+    runs-on: ubuntu-latest
+
+    steps:
+      # Retrieves the pull request commit for repeatable validation.
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      # Installs Python on the ephemeral runner; no local installation is required.
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      # Runs the repository's dependency-free quality gate.
+      - name: Validate static site
+        run: python scripts/validate_site.py

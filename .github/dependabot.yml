@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # Keep GitHub Actions versions current with a weekly, reviewable pull request.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

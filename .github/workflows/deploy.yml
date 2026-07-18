@@ -1,0 +1,71 @@
+name: Deploy static site to GitHub Pages
+
+# Publish only when the production branch changes.
+on:
+  push:
+    branches: [main, master]
+
+# Keep one Pages deployment active per repository. A newer push supersedes an older one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+# Default every job to read-only source access; deployment permissions are scoped below.
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate static site
+    runs-on: ubuntu-latest
+
+    steps:
+      # Retrieves the site and its repository-native validation script.
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      # Provides a consistent Python runtime on the GitHub-hosted runner.
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      # Fails fast if HTML structure, internal anchors, or local asset links are invalid.
+      - name: Run static-site validation
+        run: python scripts/validate_site.py
+
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    needs: validate
+
+    # Grant Pages publishing credentials only to the job that performs deployment.
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    # GitHub Pages uses this environment for deployment protection and status tracking.
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # Retrieves the exact commit that triggered this workflow.
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      # Prepares GitHub Pages metadata and validates the Pages deployment configuration.
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      # Packages the root static site (index.html, styles.css, and assets/) as the Pages artifact.
+      - name: Upload static site artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      # Publishes the uploaded artifact to the repository's GitHub Pages environment.
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
