@@ -22,7 +22,7 @@ jobs:
     steps:
       # Retrieves the site and its repository-native validation script.
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       # Provides a consistent Python runtime on the GitHub-hosted runner.
       - name: Set up Python
@@ -53,7 +53,7 @@ jobs:
     steps:
       # Retrieves the exact commit that triggered this workflow.
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       # Enables Pages when needed, then prepares deployment metadata and configuration.
       - name: Configure GitHub Pages
