@@ -3,76 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Projects page for Vanika's portfolio.">
+  <meta name="description" content="Selected platform engineering, SRE, AI, MLOps, and data projects by Vanika.">
   <title>Projects | Vanika Portfolio</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="site-logo" href="index.html#top" aria-label="Vanika DevOps portfolio home">
-        <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-          <path d="M10 9h7l7 20 7-20h7L24 40 10 9Z"></path>
-          <circle cx="10" cy="9" r="2"></circle><circle cx="38" cy="9" r="2"></circle><circle cx="24" cy="40" r="2"></circle>
-        </svg>
-      </a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#showcases">My Works</a>
-        <a href="projects.html">Projects</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
+      <a class="site-logo" href="index.html#top" aria-label="Vanika DevOps portfolio home"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 9h7l7 20 7-20h7L24 40 10 9Z"></path><circle cx="10" cy="9" r="2"></circle><circle cx="38" cy="9" r="2"></circle><circle cx="24" cy="40" r="2"></circle></svg></a>
+      <div class="nav-links"><a href="index.html">Home</a><a href="index.html#showcases">Impact</a><a href="projects.html">Projects</a><a href="blogs.html">Writing</a><a href="index.html#contact">Contact</a></div>
       <p class="status"><span aria-hidden="true"></span>System status: <strong>online</strong></p>
     </nav>
   </header>
   <main id="main-content">
     <section class="section container" aria-labelledby="projects-heading">
       <div class="section-intro">
-        <p class="section-label">Projects</p>
-        <h2 id="projects-heading">What I've built.</h2>
-        <p class="prose">A focused project portfolio showing engineering work, infrastructure delivery, and platform automation.</p>
+        <p class="section-label">04 / project portfolio</p>
+        <h1 id="projects-heading">What I've built.</h1>
+        <p class="prose">Seven projects, one thread: production SRE discipline&mdash;GitOps, infrastructure as code, observability, security, and AI-assisted operations&mdash;applied end to end.</p>
       </div>
       <div class="projects-grid">
-        <article class="project-card featured">
-          <div class="project-number">01</div><p class="project-type">Portfolio website</p>
-          <div class="mini-diagram" aria-label="Responsive portfolio website with page navigation and project showcase"><span>HTML</span><i></i><span>CSS</span><i></i><span>GitHub</span></div>
-          <h3>Vanika portfolio project</h3>
-          <p>Built this portfolio experience with responsive navigation, dedicated projects and blogs pages, and polished engineering showcase content.</p>
-          <ul class="tool-list" aria-label="Tools used"><li>HTML</li><li>CSS</li><li>Accessibility</li><li>GitHub</li></ul>
-          <a class="button button-primary" href="https://github.com/E-Vanika/Vanika-Portfolio" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-number">02</div><p class="project-type">AI marketplace platform</p>
-          <div class="mini-diagram" aria-label="Marketplace platform with github action, FastAPI backend, Supabase database, and Gemini AI integration"><span>Next.js</span><i></i><span>FastAPI</span><i></i><span>Gemini</span></div>
-          <h3>morphos-core</h3>
-          <p>Designed and built a domain-agnostic marketplace and booking engine that can morph its brand identity, data model, and AI behavior using environment-driven configuration. The platform is deployed on Vercel with GitHub Actions automation, with live examples such as <a href="https://monika-glamup.vercel.app/" target="_blank" rel="noreferrer">Monika Glam Up</a> and <a href="https://crafts-by-vani.vercel.app/" target="_blank" rel="noreferrer">Crafts by Vani</a>.</p>
-          <ul class="tool-list" aria-label="Tools used"><li>Next.js</li><li>FastAPI</li><li>Supabase</li><li>Gemini AI</li><li>Vercel</li></ul>
-          <a class="button button-primary" href="https://github.com/E-Vanika/morphos-core" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-number">03</div><p class="project-type">Cloud SRE Lab</p>
-          <div class="mini-diagram" aria-label="Cloud playground with Terraform infrastructure, Python automation, AWS, and Kubernetes"><span>Terraform</span><i></i><span>Python</span><i></i><span>AWS</span></div>
-          <h3>cloud-playground</h3>
-          <p>A hands-on cloud engineering and site reliability engineering lab environment. Built with Terraform (54.6% HCL) for infrastructure as code, Python (28.9%) for operational automation, Shell scripting (9.9%), and Docker (6.6%) for containerization. Validates multi-region disaster recovery strategies, Kubernetes patterns, CI/CD automation, and cloud security best practices.</p>
-          <ul class="tool-list" aria-label="Tools used"><li>Terraform</li><li>Python</li><li>AWS</li><li>Kubernetes</li><li>Docker</li><li>GitOps</li></ul>
-          <a class="button button-primary" href="https://github.com/E-Vanika/cloud-playground" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-number">04</div><p class="project-type">Network Engineering Lab</p>
-          <div class="mini-diagram" aria-label="Networking lab with Terraform infrastructure, WireGuard encryption, Oracle Cloud, and VCN peering"><span>Terraform</span><i></i><span>WireGuard</span><i></i><span>Oracle Cloud</span></div>
-          <h3>sre-networking-lab</h3>
-          <p>A hands-on networking fundamentals lab built on Oracle Cloud's Always Free tier at $0 cost. Demonstrates real-world networking concepts: two peered VCNs with non-overlapping CIDR blocks, isolated private subnets, and encrypted hybrid tunnels using WireGuard. All infrastructure is Terraform-backed with a plan-on-PR, apply-on-approval CI/CD pipeline. Includes comprehensive documentation mapping networking concepts to production equivalents in AWS.</p>
-          <ul class="tool-list" aria-label="Tools used"><li>Terraform</li><li>WireGuard</li><li>Oracle Cloud</li><li>VCN Peering</li><li>Security Lists</li><li>CI/CD</li></ul>
-          <a class="button button-primary" href="https://github.com/E-Vanika/sre-networking-lab" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-        </article>
+        <article class="project-card featured"><div class="project-number">01</div><p class="project-type">Config-driven AI platform</p><div class="mini-diagram" aria-label="One configurable codebase provides tenant-specific retrieval and AI capabilities"><span>Config</span><i></i><span>RAG</span><i></i><span>AI tools</span></div><h2>Morphos Core</h2><p>A multi-tenant marketplace and booking engine that changes brand identity, domain behavior, and AI knowledge through environment configuration, without duplicating the application.</p><p><strong>What it demonstrates:</strong> Platform engineering, AI architecture, retrieval, deployment, security, and operations in one system.</p><ul class="tool-list" aria-label="Tools used"><li>RAG</li><li>Vector Search</li><li>MCP</li><li>Multi-tenant</li><li>Python</li></ul><a class="button button-primary" href="https://github.com/E-Vanika/morphos-core" target="_blank" rel="noreferrer">View repository</a></article>
+        <article class="project-card"><div class="project-number">02</div><p class="project-type">GitOps and AIOps application</p><div class="mini-diagram" aria-label="Continuous integration deploys a canary release observed by telemetry"><span>CI</span><i></i><span>Canary</span><i></i><span>Signals</span></div><h2>Wayfinder</h2><p>An AI learning-path generator that combines live retrieval with LLM planning and a dead-link guardrail. Delivery uses GitHub Actions, OIDC, Argo CD, and canary rollouts.</p><p><strong>What it demonstrates:</strong> Production GitOps and AIOps discipline applied to a real application, including anomaly-gated auto-promotion or rollback.</p><ul class="tool-list" aria-label="Tools used"><li>Gemini</li><li>Argo CD</li><li>Argo Rollouts</li><li>OpenTelemetry</li><li>Terraform</li></ul><a class="button button-primary" href="https://github.com/core-intel-forge/WayFinder" target="_blank" rel="noreferrer">View repository</a></article>
+        <article class="project-card"><div class="project-number">03</div><p class="project-type">MLOps and incident intelligence</p><div class="mini-diagram" aria-label="Incident text flows through features and a model to a recommended resolution"><span>Incident</span><i></i><span>Model</span><i></i><span>Resolution</span></div><h2>Incident Resolver</h2><p>A full MLOps pipeline that classifies incident category and severity, then retrieves a recommended resolution from 15 real-world outage postmortems.</p><p><strong>What it demonstrates:</strong> Feature-store consistency, model registry discipline, GPU-aware serving choices, and drift monitoring.</p><ul class="tool-list" aria-label="Tools used"><li>MLflow</li><li>Feast</li><li>ONNX</li><li>Triton</li><li>Evidently AI</li><li>FastAPI</li></ul><a class="button button-primary" href="https://github.com/core-intel-forge/incident-resolver" target="_blank" rel="noreferrer">View repository</a></article>
+        <article class="project-card"><div class="project-number">04</div><p class="project-type">Streaming data platform</p><div class="mini-diagram" aria-label="Live signals flow through a medallion architecture into a queryable warehouse"><span>Signals</span><i></i><span>Medallion</span><i></i><span>Warehouse</span></div><h2>AIPulse Lakehouse</h2><p>A real-time and batch lakehouse that monitors arXiv, Hacker News, and GitHub, turning emerging AI signals into a versioned daily trend dataset.</p><p><strong>What it demonstrates:</strong> Streaming ingestion, medallion design, reproducible Gold datasets, and orchestration on a cost-conscious stack.</p><ul class="tool-list" aria-label="Tools used"><li>Kafka</li><li>Spark Streaming</li><li>Airflow</li><li>DVC</li><li>DuckDB</li><li>Snowflake</li></ul><a class="button button-primary" href="https://github.com/core-intel-forge/AI-pulse-lakehouse" target="_blank" rel="noreferrer">View repository</a></article>
+        <article class="project-card"><div class="project-number">05</div><p class="project-type">Production-style SRE lab</p><div class="mini-diagram" aria-label="Infrastructure as code provisions cloud resources observed by a telemetry stack"><span>Terraform</span><i></i><span>OTEL</span><i></i><span>Grafana</span></div><h2>Solo SRE Project</h2><p>A self-directed environment for validating multi-region recovery, Kubernetes patterns, CI/CD approaches, infrastructure standards, observability, and cloud-security ideas before production use.</p><p><strong>What it demonstrates:</strong> The same SRE approach used at work, exercised end to end on personally managed infrastructure.</p><ul class="tool-list" aria-label="Tools used"><li>Terraform</li><li>Python</li><li>Bash</li><li>Prometheus</li><li>Grafana</li><li>OpenTelemetry</li></ul><a class="button button-primary" href="https://github.com/E-Vanika/solo-sre-project" target="_blank" rel="noreferrer">View repository</a></article>
+        <article class="project-card"><div class="project-number">06</div><p class="project-type">Hybrid cloud networking</p><div class="mini-diagram" aria-label="On-premises networking connects securely to two peered cloud networks"><span>On-prem</span><i></i><span>WireGuard</span><i></i><span>OCI</span></div><h2>Networking A to Z</h2><p>A practical OCI networking environment with two peered VCNs, an isolated private subnet, and a real encrypted WireGuard hybrid tunnel connecting an on-premises network to cloud.</p><p><strong>What it demonstrates:</strong> Applied networking fluency and version-controlled, reviewable cloud changes rather than console-only experimentation.</p><ul class="tool-list" aria-label="Tools used"><li>Terraform</li><li>OCI</li><li>WireGuard</li><li>VCN Peering</li><li>Security Lists</li><li>CI/CD</li></ul><a class="button button-primary" href="https://github.com/E-Vanika/Networking-A-to-Z" target="_blank" rel="noreferrer">View repository</a></article>
+        <article class="project-card featured"><div class="project-number">07</div><p class="project-type">Portfolio delivery pipeline</p><div class="mini-diagram" aria-label="A pull request passes validation before a portfolio deployment"><span>Pull request</span><i></i><span>Validate</span><i></i><span>Deploy</span></div><h2>Vanika Portfolio</h2><p>This portfolio is treated as a deliverable: pull-request quality gates, deployment controls, dependency hygiene, and dependency-free accessibility and link validation.</p><p><strong>What it demonstrates:</strong> Production-minded engineering habits applied even to a static website.</p><ul class="tool-list" aria-label="Tools used"><li>GitHub Actions</li><li>Python</li><li>Accessibility</li><li>DevSecOps</li><li>Dependabot</li></ul><a class="button button-primary" href="https://github.com/E-Vanika/Vanika-Portfolio" target="_blank" rel="noreferrer">View repository</a></article>
       </div>
     </section>
   </main>
-  <footer class="footer container"><p>Built for reliable systems.</p><p>© 2026 Vanika</p></footer>
+  <footer class="footer container"><p>Built for reliable systems.</p><p>&copy; 2026 Vanika</p></footer>
 </body>
 </html>
